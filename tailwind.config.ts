@@ -156,6 +156,9 @@ export default {
 				'gojo-background': "radial-gradient(circle, rgba(0,0,0,0.9) 0%, rgba(26,31,44,1) 100%)",
 				'tron-glow': "radial-gradient(circle, rgba(30,174,219,0.4) 0%, rgba(0,0,0,0) 70%)",
 				'tron-grid': "linear-gradient(to right, rgba(30,174,219,0.15) 1px, transparent 1px), linear-gradient(to bottom, rgba(30,174,219,0.15) 1px, transparent 1px)"
+			},
+			transitionDelay: {
+				'150': '150ms',
 			}
 		}
 	},

@@ -24,7 +24,7 @@ const Index = () => {
 
   return (
     <div className="bg-black text-white overflow-x-hidden">
-      <LoadingScreen />
+      {loading && <LoadingScreen />}
       <Navbar />
       
       <main>

@@ -129,7 +129,7 @@
   }
 
   .glitch-text::after {
-    @apply text-tron-blue/70 animate-glitch left-[-2px] animation-delay-[150ms];
+    @apply text-tron-blue/70 animate-glitch left-[-2px] delay-150;
   }
 
   .domain-circle {
