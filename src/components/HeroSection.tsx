@@ -1,7 +1,7 @@
-
 import React, { useEffect, useState } from 'react';
 import { Mail, Phone, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import MochiBot from './MochiBot';
 
 const HeroSection = () => {
   const [loaded, setLoaded] = useState(false);
@@ -23,63 +23,70 @@ const HeroSection = () => {
       
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="mb-4 overflow-hidden">
-            <h1 
+        <div className="flex items-center justify-between max-w-6xl mx-auto">
+          <div className="max-w-3xl">
+            <div className="mb-4 overflow-hidden">
+              <h1 
+                className={cn(
+                  "text-4xl md:text-6xl lg:text-7xl font-bold glitch-text transition-all duration-700 transform",
+                  loaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                )}
+                data-text="RISHI KUNNATH"
+              >
+                RISHI KUNNATH
+              </h1>
+            </div>
+            
+            <div className="h-1 w-24 mx-auto bg-gradient-to-r from-tron-blue to-tron-purple my-6 rounded-full"></div>
+            
+            <h2 
               className={cn(
-                "text-4xl md:text-6xl lg:text-7xl font-bold glitch-text transition-all duration-700 transform",
-                loaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                "text-xl md:text-2xl text-gray-300 mb-6 transition-all duration-700 delay-300",
+                loaded ? "opacity-100" : "opacity-0"
               )}
-              data-text="RISHI KUNNATH"
             >
-              RISHI KUNNATH
-            </h1>
+              <span className="text-tron-blue">Full-Stack Dev</span> · 
+              <span className="text-white"> Mobile Innovator</span> · 
+              <span className="text-tron-purple"> AI Visionary</span>
+            </h2>
+            
+            <p 
+              className={cn(
+                "text-gray-400 text-lg md:text-xl mb-10 transition-all duration-700 delay-500",
+                loaded ? "opacity-100" : "opacity-0"
+              )}
+            >
+              Where Code Meets Cosmos.
+            </p>
+            
+            {/* Contact links */}
+            <div 
+              className={cn(
+                "flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 delay-700",
+                loaded ? "opacity-100" : "opacity-0"
+              )}
+            >
+              <a 
+                href="mailto:contact@rishikunnath.com" 
+                className="tron-button flex items-center space-x-2"
+              >
+                <Mail className="w-4 h-4" />
+                <span>Get In Touch</span>
+              </a>
+              
+              <a 
+                href="tel:+10000000000" 
+                className="text-gray-400 hover:text-tron-blue transition-colors flex items-center space-x-2"
+              >
+                <Phone className="w-4 h-4" />
+                <span>+1 (000) 000-0000</span>
+              </a>
+            </div>
           </div>
           
-          <div className="h-1 w-24 mx-auto bg-gradient-to-r from-tron-blue to-tron-purple my-6 rounded-full"></div>
-          
-          <h2 
-            className={cn(
-              "text-xl md:text-2xl text-gray-300 mb-6 transition-all duration-700 delay-300",
-              loaded ? "opacity-100" : "opacity-0"
-            )}
-          >
-            <span className="text-tron-blue">Full-Stack Dev</span> · 
-            <span className="text-white"> Mobile Innovator</span> · 
-            <span className="text-tron-purple"> AI Visionary</span>
-          </h2>
-          
-          <p 
-            className={cn(
-              "text-gray-400 text-lg md:text-xl mb-10 transition-all duration-700 delay-500",
-              loaded ? "opacity-100" : "opacity-0"
-            )}
-          >
-            Where Code Meets Cosmos.
-          </p>
-          
-          {/* Contact links */}
-          <div 
-            className={cn(
-              "flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 delay-700",
-              loaded ? "opacity-100" : "opacity-0"
-            )}
-          >
-            <a 
-              href="mailto:contact@rishikunnath.com" 
-              className="tron-button flex items-center space-x-2"
-            >
-              <Mail className="w-4 h-4" />
-              <span>Get In Touch</span>
-            </a>
-            
-            <a 
-              href="tel:+10000000000" 
-              className="text-gray-400 hover:text-tron-blue transition-colors flex items-center space-x-2"
-            >
-              <Phone className="w-4 h-4" />
-              <span>+1 (000) 000-0000</span>
-            </a>
+          {/* Mochi Bot */}
+          <div className="hidden lg:block">
+            <MochiBot />
           </div>
         </div>
       </div>
