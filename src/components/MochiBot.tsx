@@ -26,9 +26,9 @@ const MochiBot = () => {
           <div className={`w-4 h-${isBlinking ? '0.5' : '4'} rounded-full bg-tron-blue transition-all duration-200 ${isBlinking ? 'transform scale-y-0' : ''}`} />
         </div>
         
-        {/* Smile (Always visible) */}
-        <div className="w-12 h-6 relative overflow-hidden transition-all duration-300 opacity-100">
-          <div className="absolute w-12 h-12 border-4 border-tron-blue rounded-full -top-2 transition-all duration-300" />
+        {/* Smile (Always happy) */}
+        <div className="w-12 h-6 relative overflow-hidden">
+          <div className="absolute w-12 h-12 border-4 border-tron-blue rounded-full -top-2 transform rotate-180" style={{ borderTopColor: 'transparent', borderLeftColor: 'transparent', borderRightColor: 'transparent' }} />
         </div>
       </div>
       
